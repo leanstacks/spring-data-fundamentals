@@ -1,17 +1,18 @@
 package org.example.ws.model;
 
 import java.io.Serializable;
-import java.util.Date;
 
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 import javax.validation.constraints.NotNull;
 
+import org.joda.time.DateTime;
+
 /**
  * The parent class for all reference entities (i.e. reference data as opposed
  * to transactional data).
  * 
- * @see com.leanstacks.ws.model.TransactionalEntity
+ * @see TransactionalEntity
  * 
  * @author Matt Warman
  */
@@ -52,19 +53,19 @@ public class ReferenceEntity implements Serializable {
      * system.
      */
     @NotNull
-    private Date effectiveAt;
+    private DateTime effectiveAt;
 
     /**
      * The timestamp at which the entity's values cease to be used by the
      * system. If <code>null</code> the entity is not expired.
      */
-    private Date expiresAt;
+    private DateTime expiresAt;
 
     /**
      * The timestamp when this entity instance was created.
      */
     @NotNull
-    private Date createdAt;
+    private DateTime createdAt;
 
     public Long getId() {
         return id;
@@ -98,27 +99,27 @@ public class ReferenceEntity implements Serializable {
         this.ordinal = ordinal;
     }
 
-    public Date getEffectiveAt() {
+    public DateTime getEffectiveAt() {
         return effectiveAt;
     }
 
-    public void setEffectiveAt(Date effectiveAt) {
+    public void setEffectiveAt(DateTime effectiveAt) {
         this.effectiveAt = effectiveAt;
     }
 
-    public Date getExpiresAt() {
+    public DateTime getExpiresAt() {
         return expiresAt;
     }
 
-    public void setExpiresAt(Date expiresAt) {
+    public void setExpiresAt(DateTime expiresAt) {
         this.expiresAt = expiresAt;
     }
 
-    public Date getCreatedAt() {
+    public DateTime getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(Date createdAt) {
+    public void setCreatedAt(DateTime createdAt) {
         this.createdAt = createdAt;
     }
 

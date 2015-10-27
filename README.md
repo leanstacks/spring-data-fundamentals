@@ -26,6 +26,10 @@ The branch named `transactional-entity` contains the source code illustrated in 
 
 The branch named `reference-entity` contains the source code illustrated in the episode [Abstracting Common Reference Data Attributes into a Mapped Superclass with Spring Data JPA](https://youtu.be/xfgwrJmF8nY?list=PLGDwUiT1wr693flGbjtm0WoB_722X6lNc).
 
+#### joda
+
+The branch named `joda` contains the source code illustrated in the episode [Using JODA Framework Classes as JPA Entity Model Attributes with Spring Data JPA](https://youtu.be/OcKtf_-K5cc?list=PLGDwUiT1wr693flGbjtm0WoB_722X6lNc).
+
 
 ## Languages
 

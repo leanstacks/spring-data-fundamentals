@@ -1,7 +1,6 @@
 package org.example.ws.model;
 
 import java.io.Serializable;
-import java.util.Date;
 import java.util.UUID;
 
 import javax.persistence.GeneratedValue;
@@ -13,9 +12,12 @@ import javax.persistence.Version;
 import javax.validation.constraints.NotNull;
 
 import org.example.ws.util.RequestContext;
+import org.joda.time.DateTime;
 
 /**
  * The parent class for all transactional persistent entities.
+ * 
+ * @see ReferenceEntity
  * 
  * @author Matt Warman
  */
@@ -57,7 +59,7 @@ public class TransactionalEntity implements Serializable {
      * The timestamp when this entity instance was created.
      */
     @NotNull
-    private Date createdAt;
+    private DateTime createdAt;
 
     /**
      * A reference to the entity or process which most recently updated this
@@ -68,7 +70,7 @@ public class TransactionalEntity implements Serializable {
     /**
      * The timestamp when this entity instance was most recently updated.
      */
-    private Date updatedAt;
+    private DateTime updatedAt;
 
     public Long getId() {
         return id;
@@ -102,11 +104,11 @@ public class TransactionalEntity implements Serializable {
         this.createdBy = createdBy;
     }
 
-    public Date getCreatedAt() {
+    public DateTime getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(Date createdAt) {
+    public void setCreatedAt(DateTime createdAt) {
         this.createdAt = createdAt;
     }
 
@@ -118,11 +120,11 @@ public class TransactionalEntity implements Serializable {
         this.updatedBy = updatedBy;
     }
 
-    public Date getUpdatedAt() {
+    public DateTime getUpdatedAt() {
         return updatedAt;
     }
 
-    public void setUpdatedAt(Date updatedAt) {
+    public void setUpdatedAt(DateTime updatedAt) {
         this.updatedAt = updatedAt;
     }
 
@@ -145,7 +147,7 @@ public class TransactionalEntity implements Serializable {
         }
         setCreatedBy(username);
 
-        setCreatedAt(new Date());
+        setCreatedAt(new DateTime());
     }
 
     /**
@@ -167,7 +169,7 @@ public class TransactionalEntity implements Serializable {
         }
         setUpdatedBy(username);
 
-        setUpdatedAt(new Date());
+        setUpdatedAt(new DateTime());
     }
 
     /**
