@@ -14,13 +14,13 @@ This repository is a companion for the LEAN**STACKS** YouTube channel playlist e
 
 ### Repository Organization
 
-Each episode of the Spring Data Fundamentals video series has a corresponding branch in this repository.  For example, all of the source code illustrated in the episode entitled [Abstracting Common Transactional Attributes into a Mapped Superclass wtih Spring Data JPA](https://youtu.be/_s6THdyyfN8?list=PLGDwUiT1wr693flGbjtm0WoB_722X6lNc) may be found on the repository branch named [transactional-entity](https://github.com/mwarman/spring-data-fundamentals/tree/transactional-entity).
+Each episode of the Spring Data Fundamentals video series has a corresponding branch in this repository.  For example, all of the source code illustrated in the episode entitled [Abstracting Common Transactional Attributes into a Mapped Superclass with Spring Data JPA](https://youtu.be/_s6THdyyfN8?list=PLGDwUiT1wr693flGbjtm0WoB_722X6lNc) may be found on the repository branch named [transactional-entity](https://github.com/mwarman/spring-data-fundamentals/tree/transactional-entity).
 
 ### Branches
 
-#### first-branch
+#### transactional-entity
 
-The branch named `first-branch` contains the source code illustrated in the episode [Episode Name](https://youtu.be/_s6THdyyfN8?list=PLGDwUiT1wr693flGbjtm0WoB_722X6lNc).
+The branch named `transactional-entity` contains the source code illustrated in the episode [Abstracting Common Transactional Attributes into a Mapped Superclass with Spring Data JPA](https://youtu.be/_s6THdyyfN8?list=PLGDwUiT1wr693flGbjtm0WoB_722X6lNc).
 
 
 ## Languages

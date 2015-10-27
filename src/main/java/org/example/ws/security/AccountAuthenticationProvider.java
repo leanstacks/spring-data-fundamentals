@@ -1,5 +1,6 @@
 package org.example.ws.security;
 
+import org.example.ws.util.RequestContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -58,6 +59,8 @@ public class AccountAuthenticationProvider
                 userDetails.getPassword())) {
             throw new BadCredentialsException("Invalid credentials.");
         }
+
+        RequestContext.setUsername(userDetails.getUsername());
 
         logger.debug("< additionalAuthenticationChecks");
     }

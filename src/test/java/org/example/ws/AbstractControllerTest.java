@@ -36,6 +36,7 @@ public abstract class AbstractControllerTest extends AbstractTest {
      * <code>@Before</code> setup method.
      */
     protected void setUp() {
+        super.setUp();
         mvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
     }
 
