@@ -8,6 +8,8 @@ import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.validation.constraints.NotNull;
 
 /**
@@ -17,6 +19,12 @@ import javax.validation.constraints.NotNull;
  * 
  * @author Matt Warman
  */
+@NamedQueries({ @NamedQuery(
+        name = "Account.findByUsernameNamedQuery",
+        query = "SELECT a FROM Account a WHERE a.username = ?1"),
+        @NamedQuery(
+                name = "Account.findAllEnabledLikeUsernameNamedQuery",
+                query = "SELECT a FROM Account a WHERE UPPER(a.username) like UPPER(?1) AND a.enabled = true ORDER BY a.username ASC") })
 @Entity
 public class Account extends TransactionalEntity {
 
