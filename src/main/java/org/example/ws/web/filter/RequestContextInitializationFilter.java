@@ -10,6 +10,8 @@ import javax.servlet.ServletResponse;
 import org.example.ws.util.RequestContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.core.Ordered;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.GenericFilterBean;
 
@@ -21,6 +23,7 @@ import org.springframework.web.filter.GenericFilterBean;
  * @author Matt Warman
  */
 @Component
+@Order(Ordered.HIGHEST_PRECEDENCE)
 public class RequestContextInitializationFilter extends GenericFilterBean {
 
     /**
@@ -31,12 +34,12 @@ public class RequestContextInitializationFilter extends GenericFilterBean {
     @Override
     public void doFilter(ServletRequest req, ServletResponse resp,
             FilterChain chain) throws IOException, ServletException {
-        logger.debug("> doFilter");
+        logger.info("> doFilter");
 
         RequestContext.init();
 
         chain.doFilter(req, resp);
-        logger.debug("< doFilter");
+        logger.info("< doFilter");
     }
 
 }
