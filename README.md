@@ -34,6 +34,10 @@ The branch named `joda` contains the source code illustrated in the episode [Usi
 
 The branch named `jpa-query-definition` contains the source code illustrated in the episode [Exploring Spring Data JPA Query Definition Strategies](https://youtu.be/S5vZP_03ENY?list=PLGDwUiT1wr693flGbjtm0WoB_722X6lNc).
 
+#### jpa-mysql
+
+The branch named `jpa-mysql` contains the source code illustrated in the episode [Using a MySQL Database with Spring Data JPA](https://youtu.be/wjpeKiTiuRE?list=PLGDwUiT1wr693flGbjtm0WoB_722X6lNc).
+
 
 ## Languages
 
