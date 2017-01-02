@@ -10,7 +10,7 @@
  <parent>
   <groupId>org.springframework.boot</groupId>
   <artifactId>spring-boot-starter-parent</artifactId>
-  <version>1.3.5.RELEASE</version>
+  <version>1.4.3.RELEASE</version>
  </parent>
  
  <properties>
@@ -39,7 +39,7 @@
   <dependency>
     <groupId>org.jadira.usertype</groupId>
     <artifactId>usertype.extended</artifactId>
-    <version>4.0.0.GA</version>
+    <version>5.0.0.GA</version>
   </dependency>
   <dependency>
     <groupId>org.hsqldb</groupId>
@@ -52,15 +52,14 @@
     <scope>runtime</scope>
   </dependency>
   
-  <!-- Dependencies for Guava Cache Management Support -->
+  <!-- Dependencies for Cache Management Support -->
   <dependency>
    <groupId>org.springframework</groupId>
    <artifactId>spring-context-support</artifactId>
   </dependency>
   <dependency>
-   <groupId>com.google.guava</groupId>
-   <artifactId>guava</artifactId>
-   <version>19.0</version>
+    <groupId>com.github.ben-manes.caffeine</groupId>
+    <artifactId>caffeine</artifactId>
   </dependency>
   
   <!-- Dependencies for Actuator Production Monitoring and Management -->
@@ -70,6 +69,11 @@
   </dependency>
   
   <!-- Dependencies for Miscellaneous Functionality -->
+  <dependency>
+   <groupId>com.google.guava</groupId>
+   <artifactId>guava</artifactId>
+   <version>19.0</version>
+  </dependency>
   <dependency>
     <groupId>joda-time</groupId>
     <artifactId>joda-time</artifactId>
