@@ -42,7 +42,7 @@ public class GreetingServiceTest extends AbstractTest {
         Collection<Greeting> list = service.findAll();
 
         Assert.assertNotNull("failure - expected not null", list);
-        Assert.assertEquals("failure - expected list size", 2, list.size());
+        Assert.assertEquals("failure - expected list size", 5, list.size());
 
     }
 
@@ -86,7 +86,7 @@ public class GreetingServiceTest extends AbstractTest {
 
         Collection<Greeting> list = service.findAll();
 
-        Assert.assertEquals("failure - expected size", 3, list.size());
+        Assert.assertEquals("failure - expected size", 6, list.size());
 
     }
 
@@ -166,7 +166,7 @@ public class GreetingServiceTest extends AbstractTest {
 
         Collection<Greeting> list = service.findAll();
 
-        Assert.assertEquals("failure - expected size", 1, list.size());
+        Assert.assertEquals("failure - expected size", 4, list.size());
 
         Greeting deletedEntity = service.findOne(id);
 
