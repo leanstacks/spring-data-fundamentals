@@ -42,6 +42,10 @@ The branch named `jpa-mysql` contains the source code illustrated in the episode
 
 The branch named `flyway` contains the source code illustrated in the episode [Using Flyway with Spring Boot for Database Migrations](https://youtu.be/5JUJHHc4KZc?list=PLGDwUiT1wr693flGbjtm0WoB_722X6lNc).
 
+#### liquibase
+
+The branch named `liquibase` contains the source code illustrated in the episode [Using Liquibase with Spring Boot for Database Migrations](https://youtu.be/7VeODrRkHXg?list=PLGDwUiT1wr693flGbjtm0WoB_722X6lNc).
+
 
 ## Languages
 

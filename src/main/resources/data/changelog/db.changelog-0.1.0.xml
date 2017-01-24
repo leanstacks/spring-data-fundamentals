@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog 
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+  <changeSet id="1" author="mwarman">
+    <insert tableName="Greeting">
+        <column name="referenceId" value="e1707cf6-2aa4-4745-b04f-c9e03dc0a660" />
+        <column name="text" value="Howdy" />
+        <column name="createdBy" value="user" />
+        <column name="createdAt" valueComputed="NOW()" />
+    </insert>
+    <insert tableName="Greeting">
+        <column name="referenceId" value="09aafc85-39d3-40f3-a09d-246a48ee71d1" />
+        <column name="text" value="Hi" />
+        <column name="createdBy" value="user" />
+        <column name="createdAt" valueComputed="NOW()" />
+    </insert>
+    <insert tableName="Greeting">
+        <column name="referenceId" value="40cfa2c0-dd9a-4e94-8768-daeb1a483069" />
+        <column name="text" value="Whats Up?" />
+        <column name="createdBy" value="user" />
+        <column name="createdAt" valueComputed="NOW()" />
+    </insert>
+  </changeSet>
+
+</databaseChangeLog>
